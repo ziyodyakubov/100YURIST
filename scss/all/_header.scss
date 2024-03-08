@@ -1,9 +1,18 @@
 header {
+  z-index: 20;
   padding-top: 40px;
+  padding-bottom: 20px;
+  position: sticky;
+  top: 0;
+  background-color: $neutral-white-color;
   .header-top {
     display: flex;
     gap: 30px;
     align-items: center;
+
+    .bx-menu {
+      display: none;
+    }
 
     &_logo {
       width: 211px;
@@ -16,10 +25,14 @@ header {
       justify-content: space-between;
 
       &--item {
+        .bx-user {
+          display: none;
+        }
         &-link-input {
           display: flex;
           align-items: center;
           input {
+            box-shadow: 0px 0px 2px 0.1px rgba(0, 0, 0, 0.281);
             color: #666;
             border-radius: 10px;
             outline: none;
@@ -33,16 +46,19 @@ header {
             padding-right: 45px;
           }
 
-          img {
+          .bx-search {
             cursor: pointer;
             position: relative;
             right: 40px;
+            font-size: 24px;
+            color: #2f2b4366;
           }
         }
 
         &-link-request {
           a {
             button {
+              transition: all 0.4s ease;
               cursor: pointer;
               width: 192px;
               height: 52px;
@@ -53,7 +69,7 @@ header {
               gap: 10px;
               color: #fff;
               text-decoration: none;
-              background-color: #33836e;
+              background-color: $dark-green-color;
               border-radius: 10px;
               padding-top: 10px;
               padding-bottom: 10px;
@@ -61,7 +77,11 @@ header {
               padding-right: 20px;
 
               &:hover {
-                background-color: #33836ee8;
+                background-color: $light-green-color;
+              }
+
+              &:active {
+                background-color: $dark-green-color;
               }
             }
           }
@@ -81,7 +101,7 @@ header {
           }
 
           h3 {
-            color: #140a32;
+            color: $hodovoy-color;
             font-size: 20px;
             font-style: normal;
             font-weight: 700;
@@ -93,6 +113,7 @@ header {
   }
 
   .nav {
+    padding-top: 40px;
     .nav__list {
       list-style-type: none;
       display: flex;
@@ -101,6 +122,18 @@ header {
       justify-content: space-between;
 
       &--item {
+        transition: all 0.2s ease;
+        cursor: pointer;
+        color: $hodovoy-color;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        &:hover {
+          color: $dark-green-color;
+          cursor: pointer;
+        }
         &-call {
           cursor: pointer;
           border: 1px solid rgba(47, 43, 67, 0.15);
@@ -111,7 +144,7 @@ header {
           padding: 10px 20px;
 
           p {
-            color: var(--Base-Black, #140a32);
+            color: $hodovoy-color;
             font-size: 16px;
             font-style: normal;
             font-weight: 500;
@@ -120,18 +153,125 @@ header {
         }
 
         &-telegram {
-          @extend &-call;
+          cursor: pointer;
+          border: 1px solid rgba(47, 43, 67, 0.15);
+          border-radius: 10px;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          padding: 10px 20px;
+
+          p {
+            color: $hodovoy-color;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
         }
 
         &-user_status {
           display: flex;
+          gap: 10px;
           align-items: center;
 
+          .log_out {
+            cursor: pointer;
+            font-weight: 500;
+          }
+
+          .registration {
+            font-weight: 500;
+            cursor: pointer;
+          }
+
           p {
-            color: red;
+            color: $hodovoy-color;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
           }
         }
       }
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    z-index: 20;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    background-color: $neutral-white-color;
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      align-items: center;
+
+      .bx-user {
+        display: flex;
+        cursor: pointer;
+        font-size: 24px;
+        color: #33836e;
+      }
+
+      .bx-search {
+        position: relative;
+        right: 12px;
+        color: #33836e;
+      }
+
+      .bx-menu {
+        cursor: pointer;
+        display: flex;
+        color: #33836e;
+        position: relative;
+        right: 20px;
+        font-size: 32px;
+      }
+
+      &_logo {
+        width: 180px;
+        text-align: end;
+      }
+
+      &__list {
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &--item {
+          &-link-input {
+            display: flex;
+            align-items: center;
+
+            input {
+              display: none;
+            }
+
+            img {
+              cursor: pointer;
+              position: relative;
+              right: 10px;
+            }
+          }
+
+          &-link-request {
+            display: none;
+          }
+
+          &-link-number {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .nav {
+      display: none;
     }
   }
 }
