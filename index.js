@@ -12,7 +12,12 @@ let modalWrapper = document.querySelector(".modal-wrapper"),
 
 
 dropdownBtn.addEventListener('click',()=>{
-    dropdownRes.style.display = 'flex';
+   if(dropdownRes.style.display === 'none'){
+dropdownRes.style.display = 'flex';
+   }else{
+    dropdownRes.style.display = 'none';
+   }
+   
 })
 
 

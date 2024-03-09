@@ -2427,8 +2427,8 @@ main .dropdown {
   position: relative;
   padding: 15px;
   right: 85px;
-  display: none;
   border: 1px solid rgba(0, 0, 0, 0.0823529412);
+  display: none;
 }
 main .dropdown ul {
   color: #140a32;
