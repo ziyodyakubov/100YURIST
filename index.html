@@ -98,29 +98,42 @@
 
     <!-- MAIN SECTION STARTED -->
     <main>
+        <div class="dropdown container">
+            <ul>
+                <li>Заказать звонок</li>
+                <li>Telegram</li>
+                <li>Отзывы</li>
+                <li>Вопросы</li>
+                <li>Наши юристы</li>
+                <li>Статьи</li>
+                <li>Контакты</li>
+                <li>Вход / Регистрация</li>
+            </ul>
+        </div>
         <!-- MODAL WRAPPER STARTED -->
         <div class="modal-wrapper container">
             <img src="./assets/images/png-jpg/call-center.png" alt="call-center">
 
 
             <div class="modal-wrapper-title">
-                <i class='bx bx-x' id="#close"></i>
+                <i class='bx bx-x' id="close"></i>
                 <h3>Бесплатная юридическая консультация по телефону</h3>
 
                 <img class="user-status" src="./assets/images/png-jpg/users-online.png" alt="users-online">
 
-                <div class="input_wrapper">
-                    <small>Номер телефона</small>
-                    <input type="number" name="phone-number" required placeholder="+7 963 335-87-52">
-
                     <div class="input_wrapper">
-                        <small>Ваше имя</small>
-                        <input type="text" name="user-name" required placeholder="Александр">
+                        <small>Номер телефона</small>
 
-                        <a href="#"><button>Отправить</button></a>
+                        <input type="number" name="phone-number" required placeholder="+7 963 335-87-52">
 
+                        <div class="input_wrapper">
+                            <small>Ваше имя</small>
+                            <input type="text" name="user-name" required placeholder="Александр">
+
+                            <a href="#"><button id="show">Отправить</button></a>
+
+                        </div>
                     </div>
-                </div>
                 <p>Отправляя вопрос, вы соглашаетесь с условиями Пользовательского соглашения</p>
 
             </div>
@@ -131,7 +144,7 @@
         <!-- RESULT SECTION STARTED -->
         <section id="result-section" class="result-section">
             <div class="container">
-                <i class='bx bx-x' id="#close"></i>
+                <i class='bx bx-x' id="close2"></i>
                 <div class="section-result">
                     <img src="./assets/images/svg/check.svg" alt="check">
 
@@ -141,7 +154,7 @@
                         <p>Мы свяжемся с вами в течение х минут</p>
                     </div>
 
-                    <button>Закрыть окно</button>
+                    <button id="close3">Закрыть окно</button>
                 </div>
             </div>
         </section>
@@ -165,7 +178,7 @@
                             сотрудничества</p>
 
                         <div class="intro-section-wrapper-main-title-vopros">
-                            <button id="login">Задать вопрос юристу</button>
+                            <button id="login2">Задать вопрос юристу</button>
 
                             <div class="intro-section-wrapper-main-title-vopros-number">
                                 <h2>8 800 302-92-70</h2>

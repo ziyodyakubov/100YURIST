@@ -742,6 +742,7 @@ main .intro-section-wrapper img {
     background-color: #016f52;
     color: #fff;
     font-weight: 400;
+    display: none;
   }
   main .intro-section-wrapper-main-title-vopros button:hover {
     background-color: #81d2bc;
@@ -2181,12 +2182,18 @@ main .section-10_wrapper-flex ul li a {
   }
 }
 main .modal-wrapper {
+  background-color: #fff;
+  z-index: 50;
+  left: 27%;
+  top: 270px;
+  position: absolute;
   width: 896px;
   height: 397px;
   border-radius: 20px;
   gap: 20px;
   align-items: center;
   box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  display: none;
 }
 main .modal-wrapper img {
   height: 397px;
@@ -2271,9 +2278,16 @@ main .modal-wrapper .modal-wrapper-title p {
   line-height: normal;
   padding-top: 15px;
 }
+@media only screen and (max-width: 500px) {
+  main .modal-wrapper {
+    display: none;
+  }
+}
 main .result-section {
+  position: absolute;
+  left: 27%;
+  top: 265px;
   padding-top: 40px;
-  margin-left: 28%;
   width: 896px;
   height: 397px;
   border-radius: 20px;
@@ -2286,7 +2300,7 @@ main .result-section .bx-x {
   font-size: 30px;
   color: #33836e;
   position: relative;
-  left: 830px;
+  left: 640px;
   bottom: 18px;
 }
 main .result-section .section-result {
@@ -2325,7 +2339,7 @@ main .result-section .section-result .flex p {
 main .result-section .section-result button {
   cursor: pointer;
   transition: all 0.4s ease;
-  margin-left: 40%;
+  margin-left: 35%;
   padding-top: 16px;
   padding-bottom: 18px;
   padding-left: 36px;
@@ -2405,6 +2419,25 @@ main .result-section .section-result button:active {
   main .result-section .section-result .flex button:active {
     background-color: #016f52;
   }
+}
+main .dropdown {
+  border-radius: 10px;
+  width: 200px;
+  background-color: rgba(237, 235, 235, 0.2666666667);
+  position: relative;
+  padding: 15px;
+  right: 85px;
+  display: none;
+  border: 1px solid rgba(0, 0, 0, 0.0823529412);
+}
+main .dropdown ul {
+  color: #140a32;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+main .dropdown ul li {
+  cursor: pointer;
 }
 
 footer {

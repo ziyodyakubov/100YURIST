@@ -170,6 +170,7 @@ main {
               background-color: $dark-green-color;
               color: $neutral-white-color;
               font-weight: 400;
+              display: none;
 
               &:hover {
                 background-color: $light-green-color;
@@ -1849,12 +1850,18 @@ main {
 
   // MODAL WRAPPER STARTED
   .modal-wrapper {
+    background-color: #fff;
+    z-index: 50;
+    left: 27%;
+    top: 270px;
+    position: absolute;
     width: 896px;
     height: 397px;
     border-radius: 20px;
     gap: 20px;
     align-items: center;
     box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+    display: none;
 
     img {
       height: 397px;
@@ -1953,14 +1960,20 @@ main {
         padding-top: 15px;
       }
     }
+
+    @media only screen and (max-width: 500px) {
+      display: none;
+    }
   }
 
   // MODAL WRAPPER ENDED
 
   // RESULT SECTION STARTED
   .result-section {
+    position: absolute;
+    left: 27%;
+    top: 265px;
     padding-top: 40px;
-    margin-left: 28%;
     width: 896px;
     height: 397px;
     border-radius: 20px;
@@ -1973,7 +1986,7 @@ main {
       font-size: 30px;
       color: #33836e;
       position: relative;
-      left: 830px;
+      left: 640px;
       bottom: 18px;
     }
 
@@ -2017,7 +2030,7 @@ main {
       button {
         cursor: pointer;
         transition: all 0.4s ease;
-        margin-left: 40%;
+        margin-left: 35%;
         padding-top: 16px;
         padding-bottom: 18px;
         padding-left: 36px;
@@ -2112,4 +2125,29 @@ main {
 
     // RESULT SECTION ENDED
   }
+  // RESULT SECTION ENDED
+
+  // DROPDOWN STYLE STARTED
+  .dropdown {
+    border-radius: 10px;
+    width: 200px;
+    background-color: #edebeb44;
+    position: relative;
+    padding: 15px;
+    right: 85px;
+    display: none;
+    border: 1px solid #00000015;
+
+    ul {
+      color: #140a32;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      li {
+        cursor: pointer;
+      }
+    }
+  }
+  // DROPDOWN STYLE ENDED
 }
