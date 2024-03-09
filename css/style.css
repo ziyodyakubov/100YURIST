@@ -457,6 +457,7 @@ header .nav .nav__list--item:hover {
   cursor: pointer;
 }
 header .nav .nav__list--item-call {
+  transition: all 0.4s ease;
   cursor: pointer;
   border: 1px solid rgba(47, 43, 67, 0.15);
   border-radius: 10px;
@@ -472,7 +473,14 @@ header .nav .nav__list--item-call p {
   font-weight: 500;
   line-height: normal;
 }
+header .nav .nav__list--item-call:hover {
+  border: 1px solid #016f52;
+}
+header .nav .nav__list--item-call:active {
+  border: 1px solid rgba(47, 43, 67, 0.15);
+}
 header .nav .nav__list--item-telegram {
+  transition: all 0.4s ease;
   cursor: pointer;
   border: 1px solid rgba(47, 43, 67, 0.15);
   border-radius: 10px;
@@ -487,6 +495,12 @@ header .nav .nav__list--item-telegram p {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+}
+header .nav .nav__list--item-telegram:hover {
+  border: 1px solid #016f52;
+}
+header .nav .nav__list--item-telegram:active {
+  border: 1px solid rgba(47, 43, 67, 0.15);
 }
 header .nav .nav__list--item-user_status {
   display: flex;
@@ -1762,6 +1776,22 @@ main .section-9_wrapper .register-wrap {
   color: #fff;
   background-color: #016f52;
 }
+main .section-9_wrapper .register-wrap .online-status {
+  left: 1380px;
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-weight: 600;
+  display: inline;
+  color: #000;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 10px;
+  background-color: #fff;
+}
 main .section-9_wrapper .register-wrap .flex-item-parent {
   display: flex;
   align-items: center;
@@ -1932,11 +1962,28 @@ main .section-9_wrapper .register-wrap .input_wrapper a button:active {
   }
   main .section-9_wrapper .register-wrap {
     width: 360px;
-    height: 670px;
+    height: 700px;
     border-radius: 20px;
     padding: 20px;
     color: #fff;
     background-color: #016f52;
+  }
+  main .section-9_wrapper .register-wrap .online-status {
+    left: 0px;
+    padding-bottom: 15px;
+    position: relative;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: 600;
+    display: inline;
+    color: #000;
+    padding-top: 5px;
+    padding-bottom: 6px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 10px;
+    background-color: #fff;
   }
   main .section-9_wrapper .register-wrap .flex-item-parent {
     display: flex;
@@ -1971,6 +2018,7 @@ main .section-9_wrapper .register-wrap .input_wrapper a button:active {
     line-height: normal;
   }
   main .section-9_wrapper .register-wrap h3 {
+    padding-top: 20px;
     padding-bottom: 10px;
     font-size: 20px;
     font-style: normal;
@@ -2130,6 +2178,232 @@ main .section-10_wrapper-flex ul li a {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+  }
+}
+main .modal-wrapper {
+  width: 896px;
+  height: 397px;
+  border-radius: 20px;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+}
+main .modal-wrapper img {
+  height: 397px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+main .modal-wrapper .modal-wrapper-title .bx-x {
+  cursor: pointer;
+  position: relative;
+  font-size: 30px;
+  bottom: 18px;
+  color: #33836e;
+  left: 560px;
+}
+main .modal-wrapper .modal-wrapper-title h3 {
+  width: 465px;
+  color: #140A32;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.96px;
+  padding-bottom: 20px;
+}
+main .modal-wrapper .modal-wrapper-title .user-status {
+  margin-bottom: 30px;
+  height: 62px;
+}
+main .modal-wrapper .modal-wrapper-title .input_wrapper {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+main .modal-wrapper .modal-wrapper-title .input_wrapper small {
+  position: absolute;
+  padding-left: 15px;
+  padding-bottom: 25px;
+  color: rgba(47, 43, 67, 0.4);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+main .modal-wrapper .modal-wrapper-title .input_wrapper input {
+  cursor: pointer;
+  font-size: 14px;
+  padding-top: 20px;
+  padding-bottom: 2px;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-radius: 10px;
+  outline: none;
+  width: 205px;
+  height: 56px;
+  border: 1px solid rgba(47, 43, 67, 0.15);
+}
+main .modal-wrapper .modal-wrapper-title .input_wrapper a button {
+  width: 137px;
+  border: 1px solid #666;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  padding-top: 16px;
+  padding-bottom: 18px;
+  padding-left: 24px;
+  padding-right: 24px;
+  background-color: #140A32;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.7019607843);
+  color: #fff;
+}
+main .modal-wrapper .modal-wrapper-title .input_wrapper a button:hover {
+  background-color: rgba(20, 10, 50, 0.8705882353);
+}
+main .modal-wrapper .modal-wrapper-title .input_wrapper a button:active {
+  background-color: #140A32;
+}
+main .modal-wrapper .modal-wrapper-title p {
+  color: rgba(47, 43, 67, 0.4);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  padding-top: 15px;
+}
+main .result-section {
+  padding-top: 40px;
+  margin-left: 28%;
+  width: 896px;
+  height: 397px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+main .result-section .bx-x {
+  cursor: pointer;
+  font-size: 30px;
+  color: #33836e;
+  position: relative;
+  left: 830px;
+  bottom: 18px;
+}
+main .result-section .section-result {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 30px;
+}
+main .result-section .section-result img {
+  width: 80px;
+  position: relative;
+  left: 46%;
+}
+main .result-section .section-result .flex {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+main .result-section .section-result .flex h3 {
+  color: #140a32;
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.96px;
+}
+main .result-section .section-result .flex p {
+  color: #140a32;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 25.6px */
+}
+main .result-section .section-result button {
+  cursor: pointer;
+  transition: all 0.4s ease;
+  margin-left: 40%;
+  padding-top: 16px;
+  padding-bottom: 18px;
+  padding-left: 36px;
+  padding-right: 36px;
+  background-color: #016f52;
+  width: 185px;
+  height: 56px;
+  color: #fff;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+}
+main .result-section .section-result button:hover {
+  background-color: #81d2bc;
+}
+main .result-section .section-result button:active {
+  background-color: #016f52;
+}
+@media only screen and (max-width: 500px) {
+  main .result-section {
+    padding: 40px;
+    margin-left: 28%;
+    width: 360px;
+    height: 527px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.1);
+  }
+  main .result-section .bx-x {
+    cursor: pointer;
+    font-size: 30px;
+    color: #33836e;
+    position: relative;
+    left: 830px;
+    bottom: 18px;
+  }
+  main .result-section .section-result {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  main .result-section .section-result img {
+    width: 80px;
+    position: relative;
+    left: 36%;
+  }
+  main .result-section .section-result .flex {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  main .result-section .section-result .flex h3 {
+    font-size: 22px;
+  }
+  main .result-section .section-result .flex p {
+    font-size: 12px !important;
+    font-weight: 500;
+  }
+  main .result-section .section-result .flex button {
+    cursor: pointer;
+    transition: all 0.4s ease;
+    padding-top: 16px;
+    padding-bottom: 18px;
+    padding-left: 36px;
+    padding-right: 36px;
+    background-color: #016f52;
+    width: 185px;
+    color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+  }
+  main .result-section .section-result .flex button:hover {
+    background-color: #81d2bc;
+  }
+  main .result-section .section-result .flex button:active {
+    background-color: #016f52;
   }
 }
 

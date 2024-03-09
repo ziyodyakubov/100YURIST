@@ -37,7 +37,8 @@
                     </li>
                     <li class="header-top__list--item">
                         <div class="header-top__list--item-link-request">
-                            <a href="#"><button><img src="./assets/images/svg/request.svg" alt="request">Задать
+                            <a href="#"><button id="login"><img src="./assets/images/svg/request.svg"
+                                        alt="request">Задать
                                     вопрос</button></a>
                         </div>
                     </li>
@@ -97,6 +98,57 @@
 
     <!-- MAIN SECTION STARTED -->
     <main>
+        <!-- MODAL WRAPPER STARTED -->
+        <div class="modal-wrapper container">
+            <img src="./assets/images/png-jpg/call-center.png" alt="call-center">
+
+
+            <div class="modal-wrapper-title">
+                <i class='bx bx-x' id="#close"></i>
+                <h3>Бесплатная юридическая консультация по телефону</h3>
+
+                <img class="user-status" src="./assets/images/png-jpg/users-online.png" alt="users-online">
+
+                <div class="input_wrapper">
+                    <small>Номер телефона</small>
+                    <input type="number" name="phone-number" required placeholder="+7 963 335-87-52">
+
+                    <div class="input_wrapper">
+                        <small>Ваше имя</small>
+                        <input type="text" name="user-name" required placeholder="Александр">
+
+                        <a href="#"><button>Отправить</button></a>
+
+                    </div>
+                </div>
+                <p>Отправляя вопрос, вы соглашаетесь с условиями Пользовательского соглашения</p>
+
+            </div>
+        </div>
+        <!-- MODAL WRAPPER ENDED -->
+
+
+        <!-- RESULT SECTION STARTED -->
+        <section id="result-section" class="result-section">
+            <div class="container">
+                <i class='bx bx-x' id="#close"></i>
+                <div class="section-result">
+                    <img src="./assets/images/svg/check.svg" alt="check">
+
+                    <div class="flex">
+                        <h3>Спасибо, ваша заявка принята</h3>
+
+                        <p>Мы свяжемся с вами в течение х минут</p>
+                    </div>
+
+                    <button>Закрыть окно</button>
+                </div>
+            </div>
+        </section>
+        <!-- RESULT SECTION ENDED -->
+
+
+
         <!-- INTRO SECTION STARTED -->
         <section id="section-1" class="intro-section">
             <div class="container">
@@ -113,7 +165,7 @@
                             сотрудничества</p>
 
                         <div class="intro-section-wrapper-main-title-vopros">
-                            <button>Задать вопрос юристу</button>
+                            <button id="login">Задать вопрос юристу</button>
 
                             <div class="intro-section-wrapper-main-title-vopros-number">
                                 <h2>8 800 302-92-70</h2>
@@ -624,23 +676,23 @@
                     </div>
 
                     <div class="register-wrap">
-                        <!-- <div class="online-status">
+                        <div class="online-status">
                             <img src="./assets/images/svg/status-green.svg" alt="green-status">
                             Онлайн
-                        </div> -->
+                        </div>
                         <h3>Задать вопрос юристу</h3>
                         <p>Напишите ваш вопрос мы обязательно вам ответим</p>
 
-                        <form action="https://echo.htmlacademy.ru/" method="post">
-                            <textarea name="" id="" cols="62" rows="9"
+                        <form action="https://echo.htmlacademy.ru" method="POST">
+                            <textarea name="comment" required id="" cols="62" rows="9"
                                 placeholder="Опишите вашу проблему..."></textarea>
                             <div class="input_wrapper">
                                 <small>Номер телефона</small>
-                                <input type="number" required placeholder="+7 963 335-87-52">
+                                <input type="number" name="phone-number" required placeholder="+7 963 335-87-52">
 
                                 <div class="input_wrapper">
                                     <small>Ваше имя</small>
-                                    <input type="text" required placeholder="Александр">
+                                    <input type="text" name="user-name" required placeholder="Александр">
 
                                     <a href="#"><button>Отправить</button></a>
 
@@ -789,5 +841,6 @@
     </main>
     <!-- MAIN SECTION ENDED -->
 </body>
+<script src="./index.js"></script>
 
 </html>
